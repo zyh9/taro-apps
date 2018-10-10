@@ -4,10 +4,10 @@
 	"description": "taro",
 	"appid": "touristappid",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
-		"postcss": false,
-		"minified": false,
+		"postcss": true,
+		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
