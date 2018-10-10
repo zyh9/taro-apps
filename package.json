@@ -1,5 +1,5 @@
 {
-  "name": "myApp",
+  "name": "taro-zyh",
   "version": "1.0.0",
   "private": true,
   "description": "taro",
@@ -13,7 +13,7 @@
     "dev:rn": "npm run build:rn -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "zyh",
   "license": "MIT",
   "dependencies": {
     "@tarojs/async-await": "1.0.7",

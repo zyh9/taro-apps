@@ -104,13 +104,13 @@ class Upload extends Component {
 				console.log(src);
 				return;
 				Taro.uploadFile({
-					url: this.util.baseUrl + 'ImageUpload', //上传图片接口
+					url: util.baseUrl + 'ImageUpload', //上传图片接口
 					filePath: src,
 					name: 'ImageFile',
 					formData: {
 						//参数...
 					},
-					header: this.util.commonHeader(), //公共header
+					header: util.commonHeader(), //公共header
 					success: (res) => {
 						// console.log(res)
 						let tempFilePaths = JSON.parse(res.data).Body.ImageUrl;
