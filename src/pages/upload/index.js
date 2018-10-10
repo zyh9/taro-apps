@@ -155,7 +155,7 @@ class Upload extends Component {
 					style={style}
 				/>
 				<CoverView className="cropper-buttons">
-					<CoverView className="upload" onClick={this.uploadTap}>
+					<CoverView className="uploadImg" onClick={this.uploadTap}>
 						上传图片
 					</CoverView>
 					<CoverView className="getCropperImage" onClick={this.getCropperImage}>
