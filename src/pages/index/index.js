@@ -37,11 +37,11 @@ class Index extends Component {
 
 	componentDidHide() {}
 
-	openOther = _ => {
+	openOther() {
 		Taro.navigateTo({
 			url: '/pagesOther/other/index'
 		});
-	};
+	}
 
 	render() {
 		return (

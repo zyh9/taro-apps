@@ -17,6 +17,7 @@ class App extends Component {
       'pages/index/index',
       'pages/cart/index',
       'pages/user/index',
+      'pages/upload/index',
     ],
     //分包配置
     subPackages:[{
