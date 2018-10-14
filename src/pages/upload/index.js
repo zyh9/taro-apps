@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Button, Text, Canvas, CoverView } from '@tarojs/components';
+import { View, Canvas, CoverView } from '@tarojs/components';
 import WeCropper from 'we-cropper';
 const device = Taro.getSystemInfoSync();
 const windowWidth = device.windowWidth;
