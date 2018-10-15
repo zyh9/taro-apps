@@ -27,3 +27,7 @@
 ### 小程序图片裁剪上传插件
 
 [we-cropper地址，请戳我](https://github.com/we-plugin/we-cropper)
+
+### 转译成h5暂不支持分包路径
+
+[github issues，请戳我](https://github.com/NervJS/taro/issues/811)
