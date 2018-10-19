@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'myApp',
+  projectName: 'taro-zyh',
   date: '2018-10-9',
   designWidth: 750,
   sourceRoot: 'src',
