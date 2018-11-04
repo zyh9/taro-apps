@@ -31,3 +31,11 @@
 ### 转译成h5暂不支持分包路径
 
 [github issues，请戳我](https://github.com/NervJS/taro/issues/811)
+
+### 原生小程序转Taro代码
+
+[github issues，请戳我](https://github.com/NervJS/taro/issues/955)
+
+### 组件传递函数属性名以-on-开头
+
+[官网文档，请戳我](https://nervjs.github.io/taro/docs/best-practice.html#组件传递函数属性名以-on-开头)
