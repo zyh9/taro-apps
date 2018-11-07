@@ -39,3 +39,7 @@
 ### 组件传递函数属性名以-on-开头
 
 [官网文档，请戳我](https://nervjs.github.io/taro/docs/best-practice.html#组件传递函数属性名以-on-开头)
+
+### Taro1.1发布，全面支持微信/百度/支付宝小程序
+
+[掘金链接，请戳我](https://juejin.im/post/5be179b9f265da613d7b89ec)
