@@ -43,3 +43,7 @@
 ### Taro1.1发布，全面支持微信/百度/支付宝小程序
 
 [掘金链接，请戳我](https://juejin.im/post/5be179b9f265da613d7b89ec)
+
+### 安装 transform-runtime（去除babel-polyfill）
+
+> cnpm install babel-plugin-transform-runtime -D
