@@ -47,3 +47,5 @@
 ### 安装 transform-runtime（去除babel-polyfill）
 
 > cnpm install babel-plugin-transform-runtime -D
+
+[babel-polyfill VS babel-runtime VS babel-preset-env](https://juejin.im/post/5aefe0a6f265da0b9e64fa54)
