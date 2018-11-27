@@ -135,6 +135,7 @@ class Upload extends Component {
 		console.log(this.state.srcUrl, imgLeft, imgTop, scaleWidth, scaleHeight, x, y, width, height)
 		this.state.targetCtx.drawImage(this.state.srcUrl, imgLeft, imgTop, scaleWidth, scaleHeight) // 第一个参数代表被裁剪图片的临时路径
 		this.state.targetCtx.draw();
+		//canvas的绘制函数为异步函数，故作延时处理
 		setTimeout(_ => {
 			wx.canvasToTempFilePath({
 				canvasId: 'target',
