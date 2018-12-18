@@ -19,6 +19,15 @@
         ]
     }]
 ```
+### 相关软件下载
+
+[微信小程序，请戳我](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+
+[百度小程序，请戳我](https://smartprogram.baidu.com/docs/develop/devtools/show_sur/)
+
+[支付宝小程序，请戳我](https://docs.alipay.com/mini/ide/download)
+
+[头条小程序，请戳我](https://developer.toutiao.com/docs/devtool/versionUpdate.html)
 
 ### 图片裁剪
 
