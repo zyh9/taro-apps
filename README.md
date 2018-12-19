@@ -53,6 +53,10 @@
 
 [掘金链接，请戳我](https://juejin.im/post/5be179b9f265da613d7b89ec)
 
+### Taro1.2发布，将已有微信小程序转换为多端应用（增加头条小程序支持）
+
+[掘金链接，请戳我](https://juejin.im/post/5c185d98f265da613c09b975)
+
 ### 安装 transform-runtime（去除babel-polyfill）
 
 > cnpm install babel-plugin-transform-runtime -D
