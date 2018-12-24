@@ -62,3 +62,7 @@
 > cnpm install babel-plugin-transform-runtime -D
 
 [babel-polyfill VS babel-runtime VS babel-preset-env](https://juejin.im/post/5aefe0a6f265da0b9e64fa54)
+
+### 生命周期对应关系
+
+[生命周期对应关系，请戳我](https://nervjs.github.io/taro/docs/tutorial.html#生命周期对应关系)
