@@ -157,6 +157,7 @@ class Upload extends Component {
 							success: res => {
 								// console.log(res)
 								let tempFilePaths = JSON.parse(res.data).Body.ImageUrl;
+								// 存储返回图片链接
 								wx.setStorageSync('cutImg', tempFilePaths);
 								setTimeout(_ => {
 									wx.hideToast()
@@ -175,36 +176,6 @@ class Upload extends Component {
 				}
 			})
 		}, 200)
-		// this.state.wecropper.getCropperImage((src) => {
-		// 	if (src) {
-		// 		console.log(src);
-		// 		Taro.uploadFile({
-		// 			url: util.baseUrl + 'ImageUpload', //上传图片接口
-		// 			filePath: src,
-		// 			name: 'ImageFile',
-		// 			formData: {
-		// 				//参数...
-		// 			},
-		// 			header: util.commonHeader(), //公共header
-		// 			success: (res) => {
-		// 				// console.log(res)
-		// 				let tempFilePaths = JSON.parse(res.data).Body.ImageUrl;
-		// 				Taro.setStorageSync('cutImg', tempFilePaths);
-		// 				setTimeout(_ => {
-		// 					Taro.hideToast();
-		// 					Taro.navigateBack({
-		// 						delta: 1
-		// 					});
-		// 				}, 300);
-		// 			},
-		// 			fail: (err) => {
-		// 				console.log(err, 'fail');
-		// 			}
-		// 		});
-		// 	} else {
-		// 		console.log('获取图片地址失败，请稍后重试');
-		// 	}
-		// });
 	}
 
 	componentWillReceiveProps(nextProps) {
