@@ -93,12 +93,12 @@ class Upload extends Component {
 			sizeType: ['original'], // 可以指定是原图还是压缩图，默认二者都有  sizeType: ['original', 'compressed'],
 			sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
 			success: res => {
-				this.setState({
-					srcUrl: res.tempFilePaths[0]
-				})
-				// const src = res.tempFilePaths[0];
+				let src = res.tempFilePaths[0];
 				// 获取裁剪图片资源后，给data添加src属性及其值
-				// this.state.wecropper.pushOrign(src);
+				this.state.wecropper.pushOrign(src);
+				this.setState({
+					srcUrl: src
+				})
 			}
 		});
 	}
@@ -145,6 +145,7 @@ class Upload extends Component {
 				height,
 				success: res => {
 					const tmpPath = res.tempFilePath;
+					return;
 					if (tmpPath) {
 						wx.uploadFile({
 							url: util.baseUrl + 'ImageUpload', //上传图片接口
