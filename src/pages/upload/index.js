@@ -27,6 +27,9 @@ class Upload extends Component {
 		super();
 		this.state = {
 			cropperOpt: {
+				id: 'cropper',
+				targetId: 'target',
+				pixelRatio: devicePixelRatio,
 				width: windowWidth,
 				height: windowHeight,
 				scale: 2.5,
@@ -39,8 +42,6 @@ class Upload extends Component {
 				}
 			},
 			wecropper: null,
-			srcUrl: '',
-			targetCtx: null
 		};
 	}
 
@@ -66,11 +67,9 @@ class Upload extends Component {
 			.on('beforeDraw', (ctx, instance) => {
 				// console.log(`在画布画之前，我可以做点什么`)
 				// console.log(`当前画布上下文:`, ctx)
-			})
-			.updateCanvas();
+			});
 		this.setState({
-			wecropper: wecropperObj,
-			targetCtx: wx.createCanvasContext('target')
+			wecropper: wecropperObj
 		});
 	}
 
@@ -96,87 +95,49 @@ class Upload extends Component {
 				let src = res.tempFilePaths[0];
 				// 获取裁剪图片资源后，给data添加src属性及其值
 				this.state.wecropper.pushOrign(src);
-				this.setState({
-					srcUrl: src
-				})
 			}
 		});
 	}
 
 	//生成图片
 	getCropperImage() {
-		Taro.showToast({
+		Taro.showLoading({
 			title: '生成中',
-			icon: 'loading',
-			mask: true
 		});
-		let {
-			imgLeft,
-			imgTop,
-			scaleWidth,
-			scaleHeight
-		} = this.state.wecropper; // 获取图片在原画布坐标位置及宽高
-		let {
-			x,
-			y,
-			width,
-			height
-		} = this.state.wecropper.cut; // 获取裁剪框位置及大小
-		// 所有参数乘设备像素比
-		imgLeft = imgLeft * devicePixelRatio;
-		imgTop = imgTop * devicePixelRatio;
-		scaleWidth = scaleWidth * devicePixelRatio;
-		scaleHeight = scaleHeight * devicePixelRatio;
-		x = x * devicePixelRatio;
-		y = y * devicePixelRatio;
-		width = width * devicePixelRatio;
-		height = height * devicePixelRatio;
-		// 这里是目标canvas画布的id值
-		console.log(this.state.srcUrl, imgLeft, imgTop, scaleWidth, scaleHeight, x, y, width, height)
-		this.state.targetCtx.drawImage(this.state.srcUrl, imgLeft, imgTop, scaleWidth, scaleHeight) // 第一个参数代表被裁剪图片的临时路径
-		this.state.targetCtx.draw();
-		//canvas的绘制函数为异步函数，故作延时处理
-		setTimeout(_ => {
-			wx.canvasToTempFilePath({
-				canvasId: 'target',
-				x,
-				y,
-				width,
-				height,
+		// 通过then链式调用  参数v1.3.3支持
+		// 参考链接 https://we-plugin.github.io/we-cropper/#/api?id=wecroppergetcropperimageoptcallback
+		this.state.wecropper.getCropperImage({
+			original: true, //是否使用原图模式（默认值 false）
+			quality: 1, //图片的质量，目前仅对jpg有效。取值范围为 (0,1]，不在范围内时当作1.0处理
+			fileType: String //目标文件的类型
+		}).then(src => {
+			console.log(src)
+			return;
+			Taro.uploadFile({
+				url: util.baseUrl + 'ImageUpload', //上传图片接口
+				filePath: tmpPath,
+				name: 'ImageFile',
+				formData: {
+					//参数...
+				},
+				header: util.commonHeader(), //公共header
 				success: res => {
-					const tmpPath = res.tempFilePath;
-					return;
-					if (tmpPath) {
-						wx.uploadFile({
-							url: util.baseUrl + 'ImageUpload', //上传图片接口
-							filePath: tmpPath,
-							name: 'ImageFile',
-							formData: {
-								//参数...
-							},
-							header: util.commonHeader(), //公共header
-							success: res => {
-								// console.log(res)
-								let tempFilePaths = JSON.parse(res.data).Body.ImageUrl;
-								// 存储返回图片链接
-								wx.setStorageSync('cutImg', tempFilePaths);
-								setTimeout(_ => {
-									wx.hideToast()
-									wx.navigateBack({
-										delta: 1
-									});
-								}, 300)
-							},
-							fail: err => {
-								console.log(err, 'fail')
-							}
-						})
-					} else {
-						console.log('获取图片地址失败，请稍后重试')
-					}
+					// console.log(res)
+					let tempFilePaths = JSON.parse(res.data).Body.ImageUrl;
+					// 存储返回图片链接
+					Taro.setStorageSync('cutImg', tempFilePaths);
+					setTimeout(_ => {
+						Taro.hideLoading();
+						Taro.navigateBack({
+							delta: 1
+						});
+					}, 300)
+				},
+				fail: err => {
+					console.log(err, 'fail')
 				}
 			})
-		}, 200)
+		})
 	}
 
 	componentWillReceiveProps(nextProps) {

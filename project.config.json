@@ -11,6 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
 	"condition": {
 		"search": {
 			"current": -1,
