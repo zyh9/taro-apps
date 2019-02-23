@@ -66,3 +66,7 @@
 ### 生命周期对应关系
 
 [生命周期对应关系，请戳我](https://nervjs.github.io/taro/docs/tutorial.html#生命周期对应关系)
+
+### @taro/cli依赖未安装问题导致RN编译报错（Taro v1.2.12）
+
+[github issues，请戳我](https://github.com/NervJS/taro/issues/2121)
