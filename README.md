@@ -70,3 +70,7 @@
 ### @taro/cli依赖未安装问题导致RN编译报错（Taro v1.2.12）
 
 [github issues，请戳我](https://github.com/NervJS/taro/issues/2121)
+
+> 解决方案 npm install fbjs -D
+
+> windows文件路径 C:\Users\张燕辉\AppData\Roaming\npm\node_modules\@tarojs\cli
