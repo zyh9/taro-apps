@@ -71,6 +71,14 @@
 
 [github issues，请戳我](https://github.com/NervJS/taro/issues/2121)
 
-> 解决方案 npm install fbjs -D
+> 解决方案 `npm install fbjs -D`
 
 > windows文件路径 C:\Users\张燕辉\AppData\Roaming\npm\node_modules\@tarojs\cli
+
+### taro依赖尽量用yarn安装，npm会导致依赖安装不完整
+
+> 转换rn：npm run dev:rn（cmd窗口请勿完毕）
+
+> 构建完毕进入.rn_temp目录，运行 `expo build:android` 或 `expo build:ios`
+
+[文档链接，请戳我](https://nervjs.github.io/taro/docs/react-native.html)
