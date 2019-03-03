@@ -79,6 +79,10 @@
 
 > 转换rn：npm run dev:rn（cmd窗口请勿完毕）
 
-> 构建完毕进入.rn_temp目录，运行 `expo build:android` 或 `expo build:ios`
+> 构建完毕进入.rn_temp目录，运行 `expo build:android` 或 `expo build:ios` ，目前只针对apk进行测试
 
 [文档链接，请戳我](https://nervjs.github.io/taro/docs/react-native.html)
+
+[expo官网，请戳我](https://expo.io/)
+
+> 账号密码：zyh941109 zyh941109
