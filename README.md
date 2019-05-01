@@ -91,6 +91,8 @@
 
 > 转换rn：npm run dev:rn（cmd窗口请勿完毕）
 
+> 在使用expo构建apk需开启科学上网全局模式，保证代码以及静态资源能顺利上传至expo
+
 > 构建完毕进入.rn_temp目录，运行 `expo build:android` 或 `expo build:ios` ，目前只针对apk进行测试
 
 [文档链接，请戳我](https://nervjs.github.io/taro/docs/react-native.html)
