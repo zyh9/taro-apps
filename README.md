@@ -69,6 +69,10 @@
 
 [掘金链接，请戳我](https://juejin.im/post/5c185d98f265da613c09b975)
 
+### Taro 1.3震撼发布：全面支持 JSX 语法和 HOOKS
+
+[掘金链接，请戳我](https://juejin.im/post/5d00f7f26fb9a07efe2db5d9)
+
 ### 安装 transform-runtime（去除babel-polyfill）
 
 > cnpm install babel-plugin-transform-runtime -D
