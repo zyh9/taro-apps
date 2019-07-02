@@ -49,6 +49,10 @@
 
 [官网文档，请戳我](https://nervjs.github.io/taro/docs/best-practice.html#组件传递函数属性名以-on-开头)
 
+### 性能优化实践
+
+[官网文档，请戳我](https://nervjs.github.io/taro/docs/optimized-practice.html)
+
 ### 给组件设置 defaultProps
 
 ```
@@ -81,7 +85,7 @@
 
 ### 生命周期对应关系
 
-[生命周期对应关系，请戳我](https://nervjs.github.io/taro/docs/tutorial.html#生命周期对应关系)
+[生命周期对应关系，请戳我](https://nervjs.github.io/taro/docs/tutorial.html#生命周期)
 
 ### @taro/cli依赖未安装问题导致RN编译报错（Taro v1.2.12）
 
