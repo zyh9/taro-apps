@@ -77,6 +77,10 @@
 
 [掘金链接，请戳我](https://juejin.im/post/5d00f7f26fb9a07efe2db5d9)
 
+### 使用 React Hooks 重构你的小程序
+
+[掘金链接，请戳我](https://juejin.im/post/5d259e27e51d4510a7328144)
+
 ### 安装 transform-runtime（去除babel-polyfill）
 
 > cnpm install babel-plugin-transform-runtime -D
