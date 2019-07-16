@@ -27,6 +27,9 @@ const config = {
   },
   defineConstants: {
   },
+  alias: {
+    '@': 'src',
+  },
   copy: {
     patterns: [
     ],
