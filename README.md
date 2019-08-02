@@ -143,3 +143,16 @@ gulp.task('weapp', gulpZip)
 // gulp.dest--执行任务的文件的去处
 // gulp.watch--观察文件是否发生变化
 ```
+
+### onTouchMove不能阻止滑动穿透问题
+
+[github issues，请戳我](https://github.com/NervJS/taro/issues/3980)
+
+```javascript
+    handleTouchMove = (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+    }
+
+    <View className={classString} onTouchMove={this.handleTouchMove}>
+```
