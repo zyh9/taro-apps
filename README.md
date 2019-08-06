@@ -156,3 +156,15 @@ gulp.task('weapp', gulpZip)
 
     <View className={classString} onTouchMove={this.handleTouchMove}>
 ```
+
+### 常用方法以及引用方式
+
+| 请求          | 节流             | 图片批量上传      | 验证             |
+| ------------- | ---------------- | ----------------- | ---------------- |
+| @/utils/index | @/utils/throttle | @/utils/uploadImg | @/utils/validate |
+
+> 示例
+
+```javascript
+    import { get, post, msg } from '@/utils/index'
+```
