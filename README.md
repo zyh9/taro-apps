@@ -57,6 +57,10 @@
 
 [官网文档，请戳我](https://nervjs.github.io/taro/docs/async-await.html)
 
+### 配置目录别名alias
+
+[官网文档，请戳我](https://nervjs.github.io/taro/docs/config-detail.html#alias)
+
 ### 给组件设置 defaultProps
 
 ```
