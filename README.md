@@ -99,6 +99,31 @@
 
 [生命周期对应关系，请戳我](https://nervjs.github.io/taro/docs/tutorial.html#生命周期)
 
+```md
+    由于组件 JS 也继承自 Component 组件基类，所以页面同样拥有生命周期，页面的生命周期方法如下：
+
+    componentWillMount()
+    组件加载时触发，一个组件只会调用一次，此时组件 DOM 尚未准备好，还不能和视图层进行交互
+
+    componentDidMount()
+    组件初次渲染完成时触发，一个组件只会调用一次，代表组件已经准备妥当，可以和视图层进行交互
+
+    componentWillReceiveProps(nextProps)
+    已经装载的组件接收到新属性前调用
+
+    shouldComponentUpdate(nextProps, nextState)
+    组件是否需要更新，返回 false 不继续更新，否则继续走更新流程
+
+    componentWillUpdate(nextProps, nextState)
+    组件即将更新
+
+    componentDidUpdate(prevProps, prevState)
+    组件更新完毕
+
+    componentWillUnmount()
+    组件卸载时触发
+```
+
 ### @taro/cli依赖未安装问题导致RN编译报错（Taro v1.2.12）
 
 [github issues，请戳我](https://github.com/NervJS/taro/issues/2121)
