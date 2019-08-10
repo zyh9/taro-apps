@@ -197,3 +197,12 @@ gulp.task('weapp', gulpZip)
 ```javascript
     import { get, post, msg } from '@/utils/index'
 ```
+
+### 去除列表切换记忆滚动条位置
+
+```javascript
+    Taro.pageScrollTo({
+        scrollTop: 0,
+        duration: 0
+    })
+```
