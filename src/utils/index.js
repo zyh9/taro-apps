@@ -158,6 +158,23 @@ const goPath = path => {
   }
 }
 
+/**
+ * @param {Number} time 单位/秒
+ * Math.floor(new Date().getTime() / 1000)
+ * Math.floor((new Date(param.replace(/-/g, '/'))) / 1000)
+ * @param {Number} type 0：字符串  1：数组
+ */
+const getTime = (time, type = 0) => {
+  const two = (n) => {
+    return n < 10 ? '0' + n : '' + n;
+  };
+  // let d = two(Math.floor(time / 86400));
+  let h = two(Math.floor((time) / 3600));
+  let s = two(Math.floor((time % 3600) / 60));
+  let m = two(Math.floor(time % 60));
+  return type == 0 ? `${h}:${s}:${m}` : [h, s, m];
+}
+
 //复制数据到粘贴板
 const copyData = val => {
   return new Promise((resolve, reject) => {
@@ -197,6 +214,7 @@ export {
   FmtTime,
   downImg,
   goPath,
+  getTime,
   copyData,
   phoneCall,
   phoneHide,
