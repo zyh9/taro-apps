@@ -206,3 +206,17 @@ gulp.task('weapp', gulpZip)
         duration: 0
     })
 ```
+
+### this.$scope的使用
+
+> 在自定义组件下，当前组件实例的this，以操作组件内 Canvas 组件
+
+```javascript
+    Taro.createCanvasContext('myCanvas', this.$scope);
+
+    Taro.canvasToTempFilePath({
+        canvasId: 'myCanvas',
+        success: res => { },
+        fail: err => { }
+    }, this.$scope)
+```
