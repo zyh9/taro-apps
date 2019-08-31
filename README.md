@@ -220,3 +220,22 @@ gulp.task('weapp', gulpZip)
         fail: err => { }
     }, this.$scope)
 ```
+
+### 隐藏ScrollView滚动条
+
+```less
+    ::-webkit-scrollbar {
+        display: none;
+    }
+```
+
+### 去除button默认边框
+
+```less
+    .button{
+        border: none;
+        &::after {
+            border: none;
+        }
+    }
+```
