@@ -239,3 +239,7 @@ gulp.task('weapp', gulpZip)
         }
     }
 ```
+
+### 组件的外部样式和全局样式
+
+[官网链接，请戳我](https://taro-docs.jd.com/taro/docs/component-style.html)
