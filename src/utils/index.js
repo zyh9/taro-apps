@@ -137,7 +137,8 @@ const downImg = val => {
 
 //路由跳转
 const goPath = path => {
-  let index = getCurrentPages().findIndex(e => e.route == path);
+  //path路径 示例：'pages/index/index'  如果路径带参数，需要indexOf处理一下
+  let index = getCurrentPages().findIndex(e => path.indexOf(e.route) > -1);
   if (index > -1) {
     getCurrentPages()[index].onUnload();
     Taro.navigateBack({
