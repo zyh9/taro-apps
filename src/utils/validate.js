@@ -47,6 +47,9 @@ const authPassword = (password, againPw) => { //密码  再次输入
       return false;
     } else if (reg.test(password) && reg.test(againPw)) {
       return true
+    } else {
+      msg('密码仅支持数字')
+      return false;
     }
   } else {
     if (!password) {
@@ -57,6 +60,9 @@ const authPassword = (password, againPw) => { //密码  再次输入
       return false;
     } else if (reg.test(password)) {
       return true;
+    } else {
+      msg('密码仅支持数字')
+      return false;
     }
   }
 }

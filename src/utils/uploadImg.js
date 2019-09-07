@@ -48,6 +48,7 @@ const compressImage = (path, quality = 80) => {
 
 //上传接口  接口仅做示例
 const uploadPath = async path => {
+  // 压缩图片质量
   // Taro.compressImage && (path = await compressImage(path))
   return new Promise((resolve, reject) => {
     Taro.uploadFile({
