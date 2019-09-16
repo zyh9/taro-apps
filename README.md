@@ -186,6 +186,8 @@ gulp.task('weapp', gulpZip)
     <View className={classString} onTouchMove={this.handleTouchMove}>
 ```
 
+> 禁止手动滑动 swiper 组件，将此方法加在 swiper-item 上即可
+
 ### 常用方法以及引用方式
 
 | 请求          | 节流             | 图片批量上传      | 验证             |
