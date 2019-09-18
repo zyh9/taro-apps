@@ -245,3 +245,71 @@ gulp.task('weapp', gulpZip)
 ### 组件的外部样式和全局样式
 
 [官网链接，请戳我](https://taro-docs.jd.com/taro/docs/component-style.html)
+
+### tabBar回到顶部
+
+```javascript
+    import debounce from '@/utils/debounce';// 防抖
+    let isGoTop = false;// 是否点按回到顶部
+    let scrollTop = 0;// 页面scrollTop值
+
+    class Index extends Component {
+        config = {
+            navigationBarTitleText: ''
+        }
+        state = {}
+        // onLoad
+        componentWillMount() { }
+        // onReady
+        componentDidMount() { }
+        // onShow
+        componentDidShow() {
+            isGoTop = false;//页面切换首次点按不触发回到顶部
+        }
+        // onHide
+        componentDidHide() { }
+        // onUnload
+        componentWillUnmount() { }
+        // https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html
+        onPageScroll = debounce(e => {
+            scrollTop = e.scrollTop;
+            if (screenHeight * 3 < e.scrollTop) {
+                isGoTop = true;
+                Taro.setTabBarItem({
+                    index: 0,
+                    text: '回到顶部',
+                    iconPath: 'static/tabBar/top.png',
+                    selectedIconPath: 'static/tabBar/top-active.png',
+                })
+            } else {
+                isGoTop = false;
+                Taro.setTabBarItem({
+                    index: 0,
+                    text: '首页',
+                    iconPath: 'static/tabBar/index.png',
+                    selectedIconPath: 'static/tabBar/index-active.png',
+                })
+            }
+            console.log(isGoTop, scrollTop)
+        }, 20)
+        onTabItemTap(e) {
+            console.log(isGoTop, scrollTop)
+            if (e.index == 0 && isGoTop) {
+                Taro.pageScrollTo({
+                scrollTop: 0,
+                duration: 300
+                })
+            }
+            if (!isGoTop && screenHeight * 3 < scrollTop) {//页面切换首次点按不触发回到顶部
+                isGoTop = true;
+            }
+        }
+        render() {
+            return (
+                <View className='index'></View>
+            )
+        }
+    }
+
+    export default Index
+```
