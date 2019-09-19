@@ -313,3 +313,20 @@ gulp.task('weapp', gulpZip)
 
     export default Index
 ```
+
+> 为了防止回到顶部静态资源无法copy的问题，需要修改一下编译配置
+
+```javascript
+    // config/index.js
+    // https://nervjs.github.io/taro/docs/config-detail.html#copy
+    copy: {
+        patterns: [
+            {
+                from:'src/static/tabBar',
+                to:'dist/static/tabBar'
+            }
+        ],
+        options: {
+        }
+    },
+```

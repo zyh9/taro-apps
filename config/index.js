@@ -32,6 +32,10 @@ const config = {
   },
   copy: {
     patterns: [
+      {
+        from:'src/static/tabBar',
+        to:'dist/static/tabBar'
+      }
     ],
     options: {
     }
