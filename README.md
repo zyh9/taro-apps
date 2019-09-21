@@ -296,8 +296,8 @@ gulp.task('weapp', gulpZip)
             console.log(isGoTop, scrollTop)
             if (e.index == 0 && isGoTop) {
                 Taro.pageScrollTo({
-                scrollTop: 0,
-                duration: 300
+                    scrollTop: 0,
+                    duration: 300
                 })
             }
             if (!isGoTop && screenHeight * 3 < scrollTop) {//页面切换首次点按不触发回到顶部

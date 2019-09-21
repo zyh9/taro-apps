@@ -204,6 +204,20 @@ const phoneHide = val => {
   return str.substr(0, 3).padEnd(7, '*') + str.substr(7)
 }
 
+//获取路径参数
+const getPathData = path => {
+  let pathObj = {};
+  if (path.indexOf('?') != -1) {
+    let getArr = path.split('?')[1].split('&');
+    getArr.forEach(e => {
+      if (!(e.split('=')[0] in pathObj)) {
+        pathObj[e.split('=')[0]] = e.split('=')[1];
+      }
+    })
+    return pathObj;
+  } else return false;
+}
+
 export {
   baseUrl,
   commonHeader,
@@ -219,4 +233,5 @@ export {
   copyData,
   phoneCall,
   phoneHide,
+  getPathData,
 }
