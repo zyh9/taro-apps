@@ -330,3 +330,7 @@ gulp.task('weapp', gulpZip)
         }
     },
 ```
+
+### swiper设置圆角在真机上不显示
+
+[微信开放社区链接，请戳我](https://developers.weixin.qq.com/community/develop/doc/00026658428810dd8c07c062556400)
