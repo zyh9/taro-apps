@@ -233,9 +233,10 @@ gulp.task('weapp', gulpZip)
 
 ### 去除button默认边框
 
+> 去除button伪元素的默认样式
+
 ```less
-    .button{
-        border: none;
+    button{
         &::after {
             border: none;
         }
