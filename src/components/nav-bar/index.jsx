@@ -85,7 +85,7 @@ class Index extends Component {
                     <View className='left' onClick={this.handlegoback.bind(this)}>
                         {showBack && <Image class='image' mode='widthFix' src={goBackImage}></Image>}
                     </View>
-                    <View style={`color:${colorTheme}`} className={classNames('center', { 'ioscenter': isIOS })}>{title}</View >
+                    <View style={`color:${colorTheme}`} className={classNames('center', { 'ioscenter': isIOS, 'andcenter': !isIOS && !showBack })}>{title}</View >
                     {protectCapsule && <View className='right'></View>}
                 </View >}
                 {(protectInaver && fixedtop) && <View style='height: {{statusbarh+50}}px' class='protect-inaver'></View>}
