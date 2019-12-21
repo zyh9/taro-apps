@@ -26,6 +26,7 @@ const config = {
     }
   },
   defineConstants: {
+    'process.env.TARO_PLAT':process.env.TARO_PLAT
   },
   alias: {
     '@': 'src',
