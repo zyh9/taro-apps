@@ -343,8 +343,8 @@ gulp.task(platform, gulpZip)
 
 ### Taro升级2.0
 
-2.0 版本不能用旧的方式来支持 async-await 了，新的使用方式如下：
+Taro 2.0 中开启 async functions 支持不再需要安装 @tarojs/async-await，而是直接通过 babel 插件来获得支持。
 
-> 在项目中分别安装 babel-plugin-transform-runtime 和 babel-runtime 两个包
+> 在项目根目录下安装包 babel-plugin-transform-runtime 和 babel-runtime。
 
-[github issues，请戳我](https://github.com/NervJS/taro/issues/4837)
+[掘金链接，请戳我](https://juejin.im/post/5e15edfff265da5d661a1ac0)
