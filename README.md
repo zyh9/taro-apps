@@ -340,3 +340,9 @@ gulp.task(platform, gulpZip)
 ### swiper设置圆角在真机上不显示
 
 [微信开放社区链接，请戳我](https://developers.weixin.qq.com/community/develop/doc/00026658428810dd8c07c062556400)
+
+### Taro升级2.0
+
+2.0 版本不能用旧的方式来支持 async-await 了，新的使用方式如下：
+
+> 在项目中分别安装 babel-plugin-transform-runtime 和 babel-runtime 两个包
