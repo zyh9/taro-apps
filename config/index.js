@@ -36,7 +36,7 @@ const config = {
     'process.env.TARO_PLAT':process.env.TARO_PLAT
   },
   alias: {
-    '@': path.resolve(__dirname, '..', 'src'),
+    '@/': path.resolve(__dirname, '..', 'src/'),
   },
   copy: {
     patterns: [
