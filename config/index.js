@@ -10,27 +10,25 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: {
-    babel: {
-      sourceMap: true,
-      presets: [
-        ['env', {
-          modules: false
-        }]
-      ],
-      plugins: [
-        'transform-class-properties',
-        'transform-decorators-legacy',
-        'transform-object-rest-spread',
-        ['transform-runtime', {
-            helpers: false,
-            polyfill: false,
-            regenerator: true,
-            moduleName: 'babel-runtime'
-          }
-        ]
+  babel: {
+    sourceMap: true,
+    presets: [
+      ['env', {
+        modules: false
+      }]
+    ],
+    plugins: [
+      'transform-decorators-legacy',
+      'transform-class-properties',
+      'transform-object-rest-spread',
+      ['transform-runtime', {
+          helpers: false,
+          polyfill: false,
+          regenerator: true,
+          moduleName: 'babel-runtime'
+        }
       ]
-    }
+    ]
   },
   defineConstants: {
     'process.env.TARO_PLAT':process.env.TARO_PLAT
