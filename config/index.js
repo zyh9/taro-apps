@@ -31,7 +31,7 @@ const config = {
     ]
   },
   defineConstants: {
-    'process.env.TARO_PLAT':process.env.TARO_PLAT
+    TARO_PLAT:process.env.TARO_PLAT
   },
   alias: {
     '@': path.resolve(__dirname, '..', 'src'),
