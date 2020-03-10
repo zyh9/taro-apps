@@ -348,3 +348,7 @@ Taro 2.0 中开启 async functions 支持不再需要安装 @tarojs/async-await�
 > 在项目根目录下安装包 babel-plugin-transform-runtime 和 babel-runtime。
 
 [掘金链接，请戳我](https://juejin.im/post/5e15edfff265da5d661a1ac0)
+
+### 优雅的redux异步中间件 redux-effect
+
+[掘金链接，请戳我](https://juejin.im/post/5c98a405f265da612f1ba4bb)
