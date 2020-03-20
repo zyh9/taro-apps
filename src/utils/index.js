@@ -6,7 +6,7 @@ import Taro from '@tarojs/taro';
 const commonHeader = _ => {
   //headers每次必传数据存放位置
   return {
-    
+
   }
 }
 
@@ -53,11 +53,13 @@ const get = (opt = {}) => {
       success: res => {
         isLoad && hideLoad()
         setTimeout(_ => {
+          opt['success'] && opt['success'](res.data);
           resolve(res.data)
         }, 0)
       },
       fail: err => {
         msg('sorry，网络开小差了')
+        opt['fail'] && opt['fail'](err);
         reject(err)
       }
     })
@@ -82,15 +84,13 @@ const post = (opt = {}) => {
       success: res => {
         isLoad && hideLoad()
         setTimeout(_ => {
-          if (res.data.State == 1 || res.data.State == 10) { //10 token失效
-            resolve(res.data)
-          } else { //抛出异常
-            reject(res.data)
-          }
+          opt['success'] && opt['success'](res.data);
+          resolve(res.data)
         }, 0)
       },
       fail: err => {
         msg('sorry，网络开小差了')
+        opt['fail'] && opt['fail'](err);
         reject(err)
       }
     })
