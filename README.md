@@ -352,3 +352,7 @@ Taro 2.0 中开启 async functions 支持不再需要安装 @tarojs/async-await�
 ### 优雅的redux异步中间件 redux-effect
 
 [掘金链接，请戳我](https://juejin.im/post/5c98a405f265da612f1ba4bb)
+
+### Taro升级3.0 beta
+
+[官方vue支持文档](https://taro-docs.jd.com/taro/next/docs/vue.html)
