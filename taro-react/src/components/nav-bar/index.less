@@ -1,16 +1,22 @@
 .app-inaver {
   box-sizing: border-box;
   padding-top: 20PX;
-  width: 750px;
+  width: 100%;
   height: 70PX;
   z-index: 5000;
   color: black;
   display: flex;
   align-items: center;
+  transition: all 0.4s linear;
+  pointer-events: none;
+
+  &.pointerevents {
+    pointer-events: auto;
+  }
 
   .left {
-    height: 50PX;
-    line-height: 50PX;
+    height: 44PX;
+    line-height: 44PX;
     width: 80px;
     display: flex;
     align-items: center;
@@ -20,12 +26,22 @@
       width: 20PX;
       height: 20PX;
     }
+
+    &.left-zero {
+      width: 0;
+    }
   }
 
   .center {
-    width: 400px;
-    height: 50PX;
-    line-height: 50PX;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .title-center {
+    width: 410px;
+    height: 44PX;
+    line-height: 44PX;
     font-size: 32px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -33,18 +49,26 @@
   }
 
   .right {
-    width: 250px;
-    height: 50PX;
+    width: 210px;
+    height: 44PX;
   }
 
-  .ioscenter {
+  .ios-center {
     margin-left: 160px;
     text-align: center;
     width: 260px;
+
+    &.no-ios-back {
+      margin-left: 240px;
+    }
   }
 
-  .andcenter {
+  .android-center {
     transform: translateX(-50px);
+
+    &.no-android-back {
+      margin-left: 80px;
+    }
   }
 
   .protect-inaver {
@@ -58,4 +82,5 @@
   top: 0;
   left: 0;
   position: fixed;
+  z-index: 9999;
 }
