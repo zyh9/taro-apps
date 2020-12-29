@@ -126,25 +126,17 @@ const goPath = (path) => {
   let index = getCurrentPages.findIndex((e) => path.indexOf(e.route) > -1);
   if (index > -1) {
     getCurrentPages[index].onUnload();
-    if (path.includes(getCurrentPages[index].route)) {
-      //当前页跳转
-      Taro.redirectTo({
-        url: `/${path}`,
-      });
-    } else {
-      //非当前页跳转
-      Taro.navigateBack({
-        delta: getCurrentPages.length - (index > 0 ? index + 1 : index),
-        success: (res) => {
-          setTimeout((_) => {
-            Taro.redirectTo({
-              url: `/${path}`,
-            });
-          }, 500);
-        },
-        fail: (err) => {},
-      });
-    }
+    Taro.navigateBack({
+      delta: getCurrentPages.length - (index > 0 ? index + 1 : index),
+      success: (res) => {
+        setTimeout((_) => {
+          Taro.redirectTo({
+            url: `/${path}`,
+          });
+        }, 500);
+      },
+      fail: (err) => {},
+    });
   } else {
     Taro.navigateTo({
       url: `/${path}`,
