@@ -371,7 +371,7 @@ Taro 2.0 中开启 async functions 支持不再需要安装 @tarojs/async-await�
 
 [官方 vue 支持文档](https://taro-docs.jd.com/taro/next/docs/vue.html)
 
-### 无感知请求
+### 无感知请求（rematch）
 
 ```javascript
 import Taro from "@tarojs/taro";
