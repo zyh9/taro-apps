@@ -9,7 +9,7 @@ const config = {
     '828': 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: `dist/${process.env.TARO_PLAT}`,
   babel: {
     sourceMap: true,
     presets: [
@@ -34,7 +34,14 @@ const config = {
     TARO_PLAT:process.env.TARO_PLAT
   },
   alias: {
+    '~': path.resolve(__dirname, '..', ''),
     '@': path.resolve(__dirname, '..', 'src'),
+  },
+  sass: {
+    resource: [
+      'src/styles/index.scss'
+    ],
+    projectDirectory: path.resolve(__dirname, '..')
   },
   copy: {
     patterns: [

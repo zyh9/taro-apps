@@ -8,6 +8,8 @@ if (env == "dev") {
   baseUrl = "";
 }
 
+// import { version } from "~/package.json";
+
 const commonHeader = () => {
   // 公共header
   const { login } = store.getState(); // 获取token

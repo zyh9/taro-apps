@@ -1,0 +1,87 @@
+@import "@/styles/hairline.scss";
+
+page {
+  //https://taro-docs.jd.com/taro/docs/component-style.html
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #333;
+  line-height: 1.5;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+//隐藏滚动条
+::-webkit-scrollbar {
+  display: none;
+}
+
+// 溢出隐藏 https://github.com/NervJS/taro/issues/5710
+@mixin line-hidden($line-clamp: 1) {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  /*! autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clamp;
+}
+
+@mixin safe-area() {
+  padding-bottom: constant(safe-area-inset-bottom);
+  /* 兼容 iOS < 11.2 */
+  padding-bottom: env(safe-area-inset-bottom);
+  /* 兼容 iOS >= 11.2 */
+}
+
+//点击态
+@mixin active {
+  transition: background-color 0.3s;
+
+  &:active {
+    background-color: #f0f0f0;
+  }
+}
+
+//画三角形
+@mixin triangle($width: 10px, $direction: top, $color: #f5f5f5) {
+  border: $width solid transparent;
+
+  @if ($direction==top) {
+    // 上三角
+    border-bottom-color: $color;
+  }
+
+  @if ($direction==bottom) {
+    // 下三角
+    border-top-color: $color;
+  }
+
+  @if ($direction==left) {
+    // 左三角
+    border-right-color: $color;
+  }
+
+  @if ($direction==right) {
+    // 右三角
+    border-left-color: $color;
+  }
+}
+
+//重置button样式
+button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+
+  &::after {
+    border: 0;
+  }
+}
+
+//展示图片占位，便于前期开发
+image {
+  // background-color: #ccc;
+  display: block;
+}
