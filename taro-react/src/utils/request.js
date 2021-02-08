@@ -48,10 +48,7 @@ export const get = (opt = {}) => {
         opt.fail && opt.fail(err);
         reject(err);
         msg("sorry，网络开小差了");
-      },
-      complete: (err) => {
-        isLoad && util.hideLoad();
-      },
+      }
     });
   });
 };
@@ -88,12 +85,8 @@ export const post = (opt = {}) => {
             });
             const { login } = store.getState();
             resolve(login.data);
-          } else if (res.data.State == -13) {
-            reject(res.data);
           } else {
-            if (!opt.notShowErrorMessage) {
-              msg(res.data.Msg);
-            }
+            msg(res.data.Msg);
             reject(res.data);
           }
         } else {
@@ -104,9 +97,6 @@ export const post = (opt = {}) => {
         opt.fail && opt.fail(err);
         reject(err);
         msg("sorry，网络开小差了");
-      },
-      complete: (err) => {
-        isLoad && util.hideLoad();
       },
     });
   });
