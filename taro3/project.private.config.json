@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "排队取号",
+          "pathName": "pages/queue/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "门店列表",
+          "pathName": "pages/shop-list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "点餐",
+          "pathName": "pages/menu/index",
+          "query": "sid=38&deskid=202",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

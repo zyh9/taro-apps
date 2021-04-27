@@ -1,0 +1,82 @@
+.app-inaver {
+  box-sizing: border-box;
+  padding-top: 20PX;
+  width: 100%;
+  height: 70PX;
+  font-size: 32px;
+  z-index: 999;
+  color: black;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in;
+  pointer-events: none;
+
+  &.pointerevents {
+    pointer-events: auto;
+  }
+
+  .left {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+      width: 20PX;
+      height: 20PX;
+    }
+
+    &.left-zero {
+      width: 0 !important;
+    }
+  }
+
+  .center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .title-center {
+    width: 410px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .right {
+    width: 210px;
+  }
+
+  .ios-center {
+    margin-left: 160px;
+    text-align: center;
+    width: 270px;
+
+    &.no-ios-back {
+      margin-left: 240px;
+    }
+  }
+
+  .android-center {
+    transform: translateX(0);
+
+    &.no-android-back {
+      margin-left: 80px;
+      transform: translateX(-50px);
+    }
+  }
+
+  .protect-inaver {
+    box-sizing: border-box;
+    width: 750px;
+    height: 70PX;
+  }
+}
+
+.inaverfixed {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 999;
+}

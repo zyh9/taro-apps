@@ -1,0 +1,50 @@
+// TODO scroll-view选项样式
+.select-list {
+  width: 100%;
+  height: 96px;
+  background-color: #fff;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 10;
+  white-space: nowrap;
+  overflow: hidden;
+
+  .item {
+    display: inline-block;
+    width: 186px;
+    height: 96px;
+    text-align: center;
+    font-size: 28px;
+
+    .item-text {
+      display: inline-block;
+      line-height: 96px;
+      color: #a5a5a5;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 14px;
+        width: 100%;
+        height: 6px;
+        background: $theme-color;
+        border-radius: 6px;
+        transform: scaleX(0);
+        // 过渡和scroll-view存在互斥
+        // transition: all 0.1s ease-in;
+      }
+
+      &__active {
+        color: #181818;
+        font-weight: 700;
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}

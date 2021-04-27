@@ -1,0 +1,12 @@
+@import "@/styles/select.scss";
+
+.index {
+  width: 100%;
+  padding-bottom: 140px;
+
+
+  &__con {
+    margin-top: -26px;
+    @include safe-area();
+  }
+}
