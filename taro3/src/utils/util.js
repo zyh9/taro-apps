@@ -341,7 +341,7 @@ const getUserProfile = () => {
   return new Promise((resolve, reject) => {
     wx.getUserProfile({
       lang: "zh_CN",
-      desc: "用于展示好友之间共享点餐信息",
+      desc: "",
       success: res => {
         resolve(res);
       },

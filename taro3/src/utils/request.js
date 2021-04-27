@@ -77,7 +77,7 @@ export const COMMON_GET = (opt = {}) => {
     header: Object.assign(
       {},
       { "content-type": "application/json" },
-      Object.keys(BN_HEADER()).length ? { ...BN_HEADER() } : {}
+      Object.keys(BASE_HEADER()).length ? { ...BASE_HEADER() } : {}
     ),
     isLoad: opt.isLoad != undefined ? opt.isLoad : true
   };
@@ -91,7 +91,7 @@ export const COMMON_POST = (opt = {}) => {
     header: Object.assign(
       {},
       { "content-type": "application/json" },
-      Object.keys(BN_HEADER()).length ? { ...BN_HEADER() } : {}
+      Object.keys(BASE_HEADER()).length ? { ...BASE_HEADER() } : {}
     ),
     data: opt.data || {},
     isLoad: opt.isLoad != undefined ? opt.isLoad : true
