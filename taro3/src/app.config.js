@@ -3,7 +3,7 @@ export default {
     "pages/index/index", //首页
     "pages/store/index", //门店
     "pages/mall/index", //商城
-    "pages/user/index", //我的
+    "pages/user/index" //我的
   ],
   // subPackages: [
   //   {
@@ -15,25 +15,25 @@ export default {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",
     navigationBarTitleText: "",
-    navigationBarTextStyle: "black",
+    navigationBarTextStyle: "black"
   },
   // TODO 自定义tabBar，包含pagePath
   tabBar: {
     custom: true,
     list: [
       {
-        pagePath: "pages/index/index",
+        pagePath: "pages/index/index"
       },
       {
-        pagePath: "pages/store/index",
+        pagePath: "pages/store/index"
       },
       {
-        pagePath: "pages/mall/index",
+        pagePath: "pages/mall/index"
       },
       {
-        pagePath: "pages/user/index",
-      },
-    ],
+        pagePath: "pages/user/index"
+      }
+    ]
   },
   // tabBar: {
   //   backgroundColor: "#fff",
@@ -68,12 +68,12 @@ export default {
   //   ]
   // },
   networkTimeout: {
-    request: 8000,
+    request: 8000
   },
-  navigateToMiniProgramAppIdList: ["wxe08dc00521462af8"],
+  navigateToMiniProgramAppIdList: [""],
   permission: {
     "scope.userLocation": {
-      desc: " ",
-    },
-  },
+      desc: " "
+    }
+  }
 };
