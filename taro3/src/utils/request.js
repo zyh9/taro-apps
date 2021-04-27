@@ -73,7 +73,7 @@ export const REQUEST = ({ isLoad, ...option }, opt) => {
 export const COMMON_GET = (opt = {}) => {
   let option = {
     method: "GET",
-    url: `${BANU_URL}${opt.url}?${qs.stringify(opt.data)}`,
+    url: `${BASE_URL}${opt.url}?${qs.stringify(opt.data)}`,
     header: Object.assign(
       {},
       { "content-type": "application/json" },
@@ -87,7 +87,7 @@ export const COMMON_GET = (opt = {}) => {
 export const COMMON_POST = (opt = {}) => {
   let option = {
     method: "POST",
-    url: `${BANU_URL}${opt.url}`,
+    url: `${BASE_URL}${opt.url}`,
     header: Object.assign(
       {},
       { "content-type": "application/json" },

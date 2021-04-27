@@ -155,22 +155,3 @@ if (!Object.entries)
     return resArray;
   };
 ```
-
-### appid 汇总
-
-|        测试        |        正式        |
-| :----------------: | :----------------: |
-| wx05858fdc21860d76 | wx71373698c47f9a9f |
-
-### 场景信息
-
-```js
-  IMPORTANT_SCENE: {
-    PAY: 1,//支付场景
-    USER_CENTER: 2,//会员中心
-    LOGIN: 3,//登录
-    BIND_WX: 4,//绑定微信
-    ORDER: 5,//下单
-    SEND_COUPON: 6//发放优惠券
-  }
-```

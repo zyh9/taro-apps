@@ -1,7 +1,7 @@
 const path = require("path");
 // https://taro-docs.jd.com/taro/docs/config-detail
 const config = {
-  projectName: "banu",
+  projectName: "TARO3",
   date: "2021-4-20",
   designWidth: 750,
   deviceRatio: {
